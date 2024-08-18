@@ -1,0 +1,257 @@
+@import url(colors.css);
+@import url(typography.css);
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: var(--stone-100);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Desktop */
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 720px;
+	font-family: var(--outfit);
+	background-color: var(--white);
+	margin: 75px 0px 37.5px 0px;
+	border-radius: 1rem;
+}
+.text {
+	color: var(--stone-600);
+}
+h3 {
+	color: var(--brown-800);
+	font-weight: 400;
+	font-size: 1.8rem;
+	font-family: var(--young-serif);
+	padding-bottom: 5px;
+}
+.introduction,
+.ingredients,
+.instructions,
+.nutrition {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 2.3rem;
+}
+p,
+b,
+span,
+li {
+	font-size: 1.1rem;
+}
+
+/* INTRODUCTION */
+.logo {
+	padding: 2.3rem 2.3rem 0rem 2.3rem;
+}
+.logo > img {
+	width: 100%;
+	object-fit: contain;
+	border-radius: 0.7rem;
+}
+.introduction > .header > h1 {
+	font-family: var(--young-serif);
+	font-weight: 500;
+	color: var(--stone-900);
+	margin: 0px 0px;
+	font-size: 2.68rem;
+	padding: 10px 0px;
+}
+.preparationTime {
+	background-color: var(--rose-50);
+	border-radius: 0.7rem;
+	padding: 10px 20px;
+	margin-top: 1.5rem;
+}
+.preparationTime > p {
+	color: var(--rose-800);
+	font-weight: 700;
+	font-size: 1rem;
+}
+.preparationTime > .text > ul {
+	padding-left: 1.25rem;
+}
+.preparationTime > .text > ul > li {
+	list-style: outside;
+	padding: 10px 0px 0px 18px;
+}
+
+/* INGREDIENTS */
+.ingredients > .text > ul {
+	padding-left: 1.25rem;
+}
+.ingredients > .text > ul > li {
+	list-style: outside;
+	padding: 10px 0px 0px 18px;
+}
+/* estilizar apenas marcadores da tag <li> */
+.ingredients > .text > ul > li::marker,
+.preparationTime > .text > ul > li::marker {
+	font-size: 1rem;
+	vertical-align: middle;
+}
+.ingredients > .text,
+.instructions > .text {
+	border-bottom: 1px solid var(--stone-100);
+	padding-bottom: 30px;
+	vertical-align: middle;
+}
+
+/* INSTRUCTIONS */
+.instructions > .text {
+	padding-top: 5px;
+}
+.instructions > .text > ol {
+	list-style: outside decimal;
+	padding-left: 1.35rem;
+	font-family: var(--outfit);
+}
+.instructions > .text > ol > li {
+	padding: 13px 0px 0px 18px;
+	line-height: 1.44rem;
+}
+.instructions > .text > ol > li::marker {
+	color: var(--brown-800);
+	font-weight: 700;
+}
+
+/* NUTRITION */
+.nutrition > .text > p {
+	padding: 15px 0px;
+}
+.nutrition > .text > ul > li {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-bottom: 1px solid var(--stone-100);
+	padding: 15px 0px;
+}
+.nutrition > .text > ul > li:last-child {
+	border-bottom: none;
+}
+.nutrition > .text > ul > li > span {
+	padding-left: 2rem;
+}
+
+.nutrition > .text > ul > li > b {
+	color: var(--brown-800);
+	padding-left: 1.4rem;
+}
+
+/* footer */
+.attribution {
+	font-size: 0.8rem;
+	text-align: center;
+	margin: 5px 0px;
+	color: var(--stone-600);
+}
+.attribution a {
+	color: var(--brown-800);
+}
+
+/* TABLET */
+@media (width <= 750px) {
+	.container {
+		width: 95%;
+		transition: width 0.2s ease-in-out;
+	}
+	.logo {
+		padding: 1.6rem 1.6rem 0rem 1.6rem;
+		transition: width 0.2s ease-in-out;
+	}
+	.logo > img {
+		transition: width 0.2s ease-in-out;
+	}
+	.introduction,
+	.ingredients,
+	.instructions,
+	.nutrition {
+		padding: 15px 1.6rem;
+	}
+}
+
+/*  */
+/* MOBILE */
+/*  */
+@media (width <= 375px) {
+	h3 {
+		font-size: 1.7rem;
+	}
+	p,
+	b,
+	span,
+	li {
+		font-size: 1rem;
+	}
+	.container {
+		width: 100%;
+		margin: 0px 0px;
+		border-radius: 0px;
+		transition: width 0.2s ease-in-out;
+		transition: height 0.2s ease-in-out;
+	}
+	/* imagem */
+	.logo {
+		padding: 0;
+		transition: width 0.2s ease-in-out;
+		transition: height 0.2s ease-in-out;
+	}
+	.logo > img {
+		width: 100%;
+		object-fit: contain;
+		border-radius: 0px;
+		transition: width 0.2s ease-in-out;
+	}
+	.introduction,
+	.ingredients,
+	.instructions,
+	.nutrition {
+		padding: 15px 32px;
+	}
+	.introduction > .header > h1 {
+		margin: 20px 0px;
+		font-size: 2.2rem;
+		line-height: 35px;
+		padding: 0;
+	}
+	.preparationTime {
+		margin-top: 20px;
+	}
+	.preparationTime > p {
+		font-size: 1.2rem;
+	}
+	.preparationTime > .text > ul {
+		padding-left: 1.25rem;
+	}
+	.preparationTime > .text > ul > li {
+		list-style: outside;
+		padding: 10px 0px 0px 23px;
+	}
+
+	/* estilizar apenas marcadores da tag <li> */
+	.ingredients > .text > ul > li::marker,
+	.preparationTime > .text > ul > li::marker {
+		font-size: 0.7rem;
+		vertical-align: middle;
+	}
+
+	.nutrition > .text > ul > li > span {
+		padding-left: 1.7rem;
+	}
+	.nutrition > .text > ul > li > b {
+		color: var(--brown-800);
+		padding-left: 0.3rem;
+	}
+
+	.attribution {
+		margin: 20px 0px;
+	}
+}
