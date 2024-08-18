@@ -19,5 +19,4 @@
 assets/fonts
 
 #Avoid upload original README and Style-guide files
-README.md
 Style-guide.md
